@@ -3,5 +3,6 @@
 ## About
 
 ## Teaching
-This is a test of equation : $\beta = 1$
+[Informatics Projects](./projets_informatiques/sujets_AH.md)
+
 ## Contact
