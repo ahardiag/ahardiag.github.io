@@ -1,4 +1,6 @@
-## Projets Informatiques Chimie Paris (proposé par Arthur Hardiagon)
+## Projets Informatiques
+
+Ces projets sont destinés aux étudiants de ChimieParisTech A2 au premier semestre 2023/2024.
 
 ### Allocation de rôles dans un réseau
 
