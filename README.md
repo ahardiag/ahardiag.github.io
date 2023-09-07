@@ -1,7 +1,3 @@
----
-title: "Dr Arthur Hardiagon"
----
-
 ## About
 
 I am a post-doctoral researcher working at [Coudert lab](https://www.coudert.name/group.html) in CNRS / Chimie ParisTech institute. I am interested in chemical physics, molecular simulations (Molecular Dynamics, Monte Carlo) and databases management in materials science.
