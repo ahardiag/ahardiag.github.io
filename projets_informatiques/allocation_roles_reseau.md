@@ -29,6 +29,8 @@ Le problème NAESAT peut être visualisé sous forme de graphes bipartites, où 
 ![Legende](figures/graphe_bipartite.png)
 </div><figcaption>Figure 1 : Graphe bipartite. Les clauses sont représentées par des carrés et les variables par des cercles. Les liens déinissent quelles variables entrent dans chacune des clauses. </figcaption></figure>
 
+<img src="./figures/graphe_bipartite.png" style="display: block; margin-left: auto; margin-right: auto; width: 60%;">
+
 #### Méthode de Propagation de Message dans les graphes bipartites
 L'algorithme de propagation de message (Belief Propagation) repose sur la mise à jour itérative des messages échangés entre les nœuds du graphe. Ces messages reflètent les croyances et les probabilités concernant les attributions de variables. Les équations utilisées dans la propagation de message permettent d'ajuster ces probabilités en fonction des informations des nœuds voisins, aboutissant à une convergence vers une solution potentielle du problème.
 
@@ -38,6 +40,7 @@ Cette approche de propagation de message permet une exploration systématique de
 
 ![Legende](figures/BP_Krzakala2007.png)
 </div><figcaption>Figure 2 : Illustration du calcul des messages dans la méthode de propagation de croyances. </figcaption></figure>
+
 
 
 
