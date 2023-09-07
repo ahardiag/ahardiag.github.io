@@ -83,4 +83,4 @@ Cela permet de représenter les contraintes spécifiques au problème NAESAT, o�
 
 [Haut de la page](#allocation-de-rôles-dans-un-réseau)
 
-[Retour page](/projets_informatiques/sujets_AH.md#projets-informatiques-chimie-paris-proposé-par-arthur-hardiagon)
+[Retour page](sujets_AH.md#projets-informatiques-chimie-paris-proposé-par-arthur-hardiagon)

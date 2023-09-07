@@ -53,4 +53,4 @@ void initializeGrid(double grid[GRID_SIZE_X][GRID_SIZE_Y][GRID_SIZE_Z]) {
 
 [Haut de la page](#surface-dune-molécule)
 
-[Retour page](/projets_informatiques/sujets_AH.md#projets-informatiques-chimie-paris-proposé-par-arthur-hardiagon)
+[Retour page](sujets_AH.md#projets-informatiques-chimie-paris-proposé-par-arthur-hardiagon)
