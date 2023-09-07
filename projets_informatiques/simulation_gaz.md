@@ -15,8 +15,7 @@ Pour comprendre les phénomènes physiques à l'échelle moléculaire, on peut a
 
 ##### Liens utiles
 
-- Chapitre du livre "Molecular Simulations" de Frenkel et Smit : pseudocodes pour implémenter un algorithme de simulation moléculaire
-https://dasher.wustl.edu/chem430/readings/frenkel-montecarlo.pdf
+- [Chapitre de livre](https://dasher.wustl.edu/chem430/readings/frenkel-montecarlo.pdf) *Molecular Simulations* de Frenkel et Smit : pseudocodes pour implémenter un algorithme de simulation moléculaire
 
 [Haut de la page](#simulation-dun-gaz-rare)
 

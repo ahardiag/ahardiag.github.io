@@ -23,7 +23,7 @@ Pour calculer des propriétés géométrique comme la surface et le volume, on p
 
 En C, on pourra utiliser, par exemple un tableau tridimensionnel prédéfini au début du programme :
 
-```C
+```c
 // Taille de la grille en X, Y et Z (ajustez-la en fonction de votre besoin)
 #define GRID_SIZE_X 100
 #define GRID_SIZE_Y 100
@@ -41,15 +41,15 @@ void initializeGrid(double grid[GRID_SIZE_X][GRID_SIZE_Y][GRID_SIZE_Z]) {
 }
 ```
 
-> Note : On pourra utiliser une approche où la taille de la grille est fixée par le pas de la grille et les dimensions de la molécule étudiée.
+> On pourra utiliser une approche où la taille de la grille est fixée par le pas de la grille et les dimensions de la molécule étudiée.
 
 #### Liens utiles
 - Article assez complet sur les méthodes de calcul de surface de molécules, très mathématique. https://www.ljll.math.upmc.fr/~quan/documents/Molecular_Surfaces_els.pdf
 - Quelques programmes déjà existants :
-   - MSRoll : http://www.csb.yale.edu/userguides/graphics/msp/msu_local.html#MSRoll
-   - MSMS : https://ccsb.scripps.edu/msms/documentation/
-   - BIOVIA : https://www.researchgate.net/publication/353035302_Method_for_installing_Biovia_Discovery_Studio_Viewer_2021_in_Linux_Mint_201_or_Ubuntu_2004
-   - PYMOL : https://www.youtube.com/watch?v=WC-r53vBLvM
+   - [MSRoll](http://www.csb.yale.edu/userguides/graphics/msp/msu_local.html#MSRoll)
+   - [MSMS](https://ccsb.scripps.edu/msms/documentation/)
+   - [BIOVIA](https://www.researchgate.net/publication/353035302_Method_for_installing_Biovia_Discovery_Studio_Viewer_2021_in_Linux_Mint_201_or_Ubuntu_2004)
+   - [PYMOL](https://www.youtube.com/watch?v=WC-r53vBLvM)
 
 [Haut de la page](#surface-dune-molécule)
 
