@@ -1,3 +1,9 @@
+---
+layout: default
+title: Projets Informatiques
+description: Surface d'une molécule
+---
+
 ### Surface d'une molécule
 <!--
 #### Sujet
