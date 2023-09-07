@@ -1,3 +1,9 @@
+---
+layout: default
+title: Projets Informatiques
+description: Ressources
+---
+
 ## Projets Informatiques
 
 Ces projets sont destinés aux étudiants de ChimieParisTech A2 au premier semestre 2023/2024.
