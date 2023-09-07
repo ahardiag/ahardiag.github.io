@@ -50,3 +50,7 @@ void initializeGrid(double grid[GRID_SIZE_X][GRID_SIZE_Y][GRID_SIZE_Z]) {
    - MSMS : https://ccsb.scripps.edu/msms/documentation/
    - BIOVIA : https://www.researchgate.net/publication/353035302_Method_for_installing_Biovia_Discovery_Studio_Viewer_2021_in_Linux_Mint_201_or_Ubuntu_2004
    - PYMOL : https://www.youtube.com/watch?v=WC-r53vBLvM
+
+[Haut de la page](#surface-dune-molécule)
+
+[Retour page](/projets_informatiques/sujets_AH.md#projets-informatiques-chimie-paris-proposé-par-arthur-hardiagon)

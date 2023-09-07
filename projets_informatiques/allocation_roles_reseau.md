@@ -79,3 +79,6 @@ Cela permet de représenter les contraintes spécifiques au problème NAESAT, o�
 (2) Krz̧akała, F.; Montanari, A.; Ricci-Tersenghi, F.; Semerjian, G.; Zdeborová, L. Gibbs States and the Set of Solutions of Random Constraint Satisfaction Problems. Proceedings of the National Academy of Sciences 2007, 104 (25), 10318–10323. https://doi.org/10.1073/pnas.0703685104.
 (3) Mézard, M.; Parisi, G.; Zecchina, R. Analytic and Algorithmic Solution of Random Satisfiability Problems. Science 2002, 297 (5582), 812–815. https://doi.org/10.1126/science.1073287.
 
+[Haut de la page](#allocation-de-rôles-dans-un-réseau)
+
+[Retour page](/projets_informatiques/sujets_AH.md#projets-informatiques-chimie-paris-proposé-par-arthur-hardiagon)

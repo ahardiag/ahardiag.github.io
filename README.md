@@ -1,5 +1,3 @@
-# Dr. Arthur Hardiagon
-
 ## About
 
 ## Teaching
