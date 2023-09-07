@@ -1,8 +1,8 @@
 ### Surface d'une molécule
-
+<!--
 #### Sujet
 L'examen approfondi de la surface des molécules biologiques, en particulier des protéines, revêt une importance capitale pour élucider leur structure, ce processus ayant des répercussions significatives sur des aspects essentiels tels que leurs fonctions, leur stabilité et leur réactivité. Vous écrirez un programme informatique permettant de calculer la surface moléculaire d'une protéine ou, dans un premier temps d'une petite molécule, à partir de sa structure PDB. Vous pourrez utiliser une méthode de votre choix, analytique ou discrète.
-
+-->
 #### Démarche proposée
 1. Définir la surface d'une molécule et ce que l'on veut calculer
 2. Analyser un fichier PDB.

@@ -1,7 +1,9 @@
 ### Allocation de rôles dans un réseau
 
+<!--
 #### Sujet
 Imaginez que vous soyez responsable de la gestion d'une équipe formée de membres ayant des compétences variées et des préférences spécifiques en matière de tâches. Chaque membre de l'équipe dispose d'une liste de rôles qu'il souhaite occuper et d'autres qu'il préférerait éviter (comme par exemple le rôle de coordinateur ou d'expert technique). Pour chaque tâche, il est nécessaire qu'au moins un membre de l'équipe se voie assigner un rôle préféré et un rôle non préféré. Cette contrainte assure une distribution équilibrée des tâches au sein de l'équipe. Dans un contexte où les individus travaillent sur plusieurs tâches en équipes formées au hasard, la répartition des rôles devient un problème NP-complet, connu sous le nom de NAE-SAT (Not-All-Equal-Satisfiability). La résolution de ce problème pour toutes les instances possibles à l'aide d'un algorithme en temps polynomial n'est pas possible. Vous proposerez un algorithme permettant de trouver une solution du problème NAE-3-SAT pour des instances générées aléatoirement.
+--> 
 
 #### Démarche proposée
 1. Créer des instances pour le problème NAE-3-SAT en utilisant des descriptions de graphes bipartites aléatoires.
