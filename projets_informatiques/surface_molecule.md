@@ -13,10 +13,10 @@ L'examen approfondi de la surface des molécules biologiques, en particulier des
 
 #### Surface d'une molécule : définitions
 
-<figure align="center"><div style="text-align:center; width:300px;margin: 0 auto">
+<img src="./figures/surfaces_def.png" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
 
-![Legende](figures/surfaces_def.png)
-</div><figcaption>Figure 1 : Défition des surfaces de molécule : surface de Van der Waals, surface accessible au solvent (SAS) et surface exclue du solvent (SES) ou surface de Connely. Ref : <a href="https://doi.org/10.1007/978-3-642-03270-7_8">Sourina2009</a></figcaption></figure>
+*Figure 1 : Défition des surfaces de molécule : surface de Van der Waals, surface accessible au solvent (SAS) et surface exclue du solvent (SES) ou surface de Connely. Source : <a href="https://doi.org/10.1007/978-3-642-03270-7_8">Sourina2009</a>*
+
 
 #### Approche basée sur les grilles
 Pour calculer des propriétés géométrique comme la surface et le volume, on peut utiliser une méthode basée sur des grilles. On cherche alors à représenter la densité des atomes sur une grille discrète. La taille de la grille définit la résolution du système.

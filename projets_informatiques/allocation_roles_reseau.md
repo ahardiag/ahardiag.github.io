@@ -24,24 +24,18 @@ Les membres d'un réseau (ex: travailleurs dans une entreprise) sont représent�
 #### Lien avec les Graphes Bipartites
 Le problème NAESAT peut être visualisé sous forme de graphes bipartites, où les nœuds d'un ensemble représentent les variables et les nœuds de l'autre ensemble représentent les clauses. Les arêtes du graphe indiquent les liens entre les variables et les clauses. Cette représentation graphique facilite la visualisation et l'analyse du problème, tout en permettant l'application d'algorithmes de propagation de messages.
 
-<figure align="center"><div style="text-align:center; width:300px;margin: 0 auto">
+<img src="./figures/graphe_bipartite.png" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
 
-![Legende](figures/graphe_bipartite.png)
-</div><figcaption>Figure 1 : Graphe bipartite. Les clauses sont représentées par des carrés et les variables par des cercles. Les liens déinissent quelles variables entrent dans chacune des clauses. </figcaption></figure>
-
-<img src="./figures/graphe_bipartite.png" style="display: block; margin-left: auto; margin-right: auto; width: 60%;">
+*Figure 1 : Graphe bipartite. Les clauses sont représentées par des carrés et les variables par des cercles. Les liens définissent les variables entrantes dans chacune des clauses.*
 
 #### Méthode de Propagation de Message dans les graphes bipartites
 L'algorithme de propagation de message (Belief Propagation) repose sur la mise à jour itérative des messages échangés entre les nœuds du graphe. Ces messages reflètent les croyances et les probabilités concernant les attributions de variables. Les équations utilisées dans la propagation de message permettent d'ajuster ces probabilités en fonction des informations des nœuds voisins, aboutissant à une convergence vers une solution potentielle du problème.
 
 Cette approche de propagation de message permet une exploration systématique de l'espace des solutions et offre un cadre méthodologique pour résoudre des instances du problème NAESAT.
 
-<figure align="center"><div style="text-align:center; width:300px;margin: 0 auto">
+<img src="./figures/BP_Krzakala2007.png" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
 
-![Legende](figures/BP_Krzakala2007.png)
-</div><figcaption>Figure 2 : Illustration du calcul des messages dans la méthode de propagation de croyances. </figcaption></figure>
-
-
+*Figure 2 : Illustration du calcul des messages dans la méthode de propagation de croyances.*
 
 
 ##### Calcul des messages
