@@ -4,14 +4,14 @@ title: Projets Informatiques
 description: Allocation de rôles dans un réseau
 ---
 
-### Allocation de rôles dans un réseau
+## Allocation de rôles dans un réseau
 
 <!--
-#### Sujet
+### Sujet
 Imaginez que vous soyez responsable de la gestion d'une équipe formée de membres ayant des compétences variées et des préférences spécifiques en matière de tâches. Chaque membre de l'équipe dispose d'une liste de rôles qu'il souhaite occuper et d'autres qu'il préférerait éviter (comme par exemple le rôle de coordinateur ou d'expert technique). Pour chaque tâche, il est nécessaire qu'au moins un membre de l'équipe se voie assigner un rôle préféré et un rôle non préféré. Cette contrainte assure une distribution équilibrée des tâches au sein de l'équipe. Dans un contexte où les individus travaillent sur plusieurs tâches en équipes formées au hasard, la répartition des rôles devient un problème NP-complet, connu sous le nom de NAE-SAT (Not-All-Equal-Satisfiability). La résolution de ce problème pour toutes les instances possibles à l'aide d'un algorithme en temps polynomial n'est pas possible. Vous proposerez un algorithme permettant de trouver une solution du problème NAE-3-SAT pour des instances générées aléatoirement.
 --> 
 
-#### Démarche proposée
+### Démarche proposée
 1. Créer des instances pour le problème NAE-3-SAT en utilisant des descriptions de graphes bipartites aléatoires.
 2. Ecrire un programme qui vérifie si une problème est satisfait ou non.
 3. Implémenter une méthode de résolution de votre choix (Simulated Annealing, Belief Propagation, Genetic Algorithm).
@@ -19,22 +19,22 @@ Imaginez que vous soyez responsable de la gestion d'une équipe formée de membr
 5. Comparer les performances de votre programme à d'autres méthodes ou à une approche brute-force. Eventuellement montrer les limites 
 
 
-#### Définition d'un Problème NAESAT :
+### Définition d'un Problème NAESAT :
 Mathématiquement, le problème NAESAT (Not-All-Equal Satisfiability) consiste à déterminer si une conjonction de clauses logiques peut être rendue vraie en attribuant des valeurs de vérité aux variables, tout en respectant les contraintes suivantes : chaque clause doit avoir au moins un littéral vrai(1) et au moins un littéral faux(0). Les clauses décrivent des relations entre les variables, et l'objectif est de trouver une assignation des variables qui satisfait ces contraintes.
 
 Le problème NAESAT peut être assimilé au problème de coloriage de graphes à deux couleurs.
 
-#### Lien avec l'analogie des rôles dans un réseau
+### Lien avec l'analogie des rôles dans un réseau
 Les membres d'un réseau (ex: travailleurs dans une entreprise) sont représentés par des variables qui peuvent avoir deux états (coordinateur:1; technicien:0). Chaque tâche est représentée par une clause dans laquel les membres sont connectés (équipe) et pour lequel la contrainte impose d'avoir au moins un coordinateur et un technicien.
 
-#### Lien avec les Graphes Bipartites
+### Lien avec les Graphes Bipartites
 Le problème NAESAT peut être visualisé sous forme de graphes bipartites, où les nœuds d'un ensemble représentent les variables et les nœuds de l'autre ensemble représentent les clauses. Les arêtes du graphe indiquent les liens entre les variables et les clauses. Cette représentation graphique facilite la visualisation et l'analyse du problème, tout en permettant l'application d'algorithmes de propagation de messages.
 
 <img src="./figures/graphe_bipartite.png" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
 
 *Figure 1 : Graphe bipartite. Les clauses sont représentées par des carrés et les variables par des cercles. Les liens définissent les variables entrantes dans chacune des clauses.*
 
-#### Méthode de Propagation de Message dans les graphes bipartites
+### Méthode de Propagation de Message dans les graphes bipartites
 L'algorithme de propagation de message (Belief Propagation) repose sur la mise à jour itérative des messages échangés entre les nœuds du graphe. Ces messages reflètent les croyances et les probabilités concernant les attributions de variables. Les équations utilisées dans la propagation de message permettent d'ajuster ces probabilités en fonction des informations des nœuds voisins, aboutissant à une convergence vers une solution potentielle du problème.
 
 Cette approche de propagation de message permet une exploration systématique de l'espace des solutions et offre un cadre méthodologique pour résoudre des instances du problème NAESAT.
@@ -44,13 +44,13 @@ Cette approche de propagation de message permet une exploration systématique de
 *Figure 2 : Illustration du calcul des messages dans la méthode de propagation de croyances.*
 
 
-##### Calcul des messages
+### Calcul des messages
 -  partant des variables :
 $$\mu_{i \to a}(x_i) = \prod_{b \in \partial i \backslash a}\hat{\mu}_{b \to i}(x_i)$$
 - arrivant sur les variables :
 $$\hat{\mu}_{b \to i}(x_i) = \sum_{\mathbf{x}_{\partial b \backslash i}} f_b(x_i,\mathbf{x}_{\partial b \backslash i}) \prod_{k \in \partial b \backslash i} \mu_{k \to b}(\mathbf{x}_k)$$
 
-##### Calculs des croyances
+### Calculs des croyances
 
 $$p(x_i) \propto \prod_{b \in \partial i} \hat{\mu}_{b \to i}(x_i)$$
 
@@ -78,7 +78,7 @@ Où $x_{l_1}, x_{l_2}, \ldots, x_{l_k}$ sont les valeurs de vérité des variabl
 Cela permet de représenter les contraintes spécifiques au problème NAESAT, où chaque clause doit avoir à la fois une variable vraie et un variable fausse pour être considérée comme satisfaite.
 
 
-#### Références
+### Références
 
 1) Castellani, T.; Napolano, V.; Ricci-Tersenghi, F.; Zecchina, R. Bicolouring Random Hypergraphs. J. Phys. A: Math. Gen. 2003, 36 (43), 11037. [https://doi.org/10.1088/0305-4470/36/43/026](https://doi.org/10.1088/0305-4470/36/43/026).
 
