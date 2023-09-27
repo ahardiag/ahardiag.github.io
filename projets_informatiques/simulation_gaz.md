@@ -59,10 +59,17 @@ $$
 
 avec $\langle \rangle$ une moyenne entre plusieurs configurations, U le potentiel d'interaction de paires et $\rho$ la densité du système, et $\vec{r}_{ij}$ le vecteur reliant deux particules.
 
+En utilisant le potentiel d'interaction de Lennard-Jones, la pression se réécrit :
+
+$$
+P = \rho k_{B}T + \frac{1}{V} 24 \epsilon \langle \sum_{i<j} (2(\frac{\sigma}{r_{ij}})^{12}-(\frac{\sigma}{r_{ij}})^{6}) \rangle 
+$$
+
 
 ### Liens utiles
 
 - [Chapitre de livre](https://dasher.wustl.edu/chem430/readings/frenkel-montecarlo.pdf) *Molecular Simulations* de Frenkel et Smit : pseudocodes pour implémenter un algorithme de simulation moléculaire
+- Verlet, L. Computer “Experiments” on Classical Fluids. I. Thermodynamical Properties of Lennard-Jones Molecules. Phys. Rev. 1967, 159 (1), 98–103. https://doi.org/10.1103/PhysRev.159.98.
 
 [Haut de la page](#simulation-dun-gaz-rare)
 
