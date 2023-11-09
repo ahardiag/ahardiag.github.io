@@ -4,19 +4,20 @@ title: Projets Informatiques
 description: Allocation de rôles dans un réseau
 ---
 
-## Allocation de rôles dans un réseau
+## Réseau sous contraintes
 
-<!--
+
 ### Sujet
-Imaginez que vous soyez responsable de la gestion d'une équipe formée de membres ayant des compétences variées et des préférences spécifiques en matière de tâches. Chaque membre de l'équipe dispose d'une liste de rôles qu'il souhaite occuper et d'autres qu'il préférerait éviter (comme par exemple le rôle de coordinateur ou d'expert technique). Pour chaque tâche, il est nécessaire qu'au moins un membre de l'équipe se voie assigner un rôle préféré et un rôle non préféré. Cette contrainte assure une distribution équilibrée des tâches au sein de l'équipe. Dans un contexte où les individus travaillent sur plusieurs tâches en équipes formées au hasard, la répartition des rôles devient un problème NP-complet, connu sous le nom de NAE-SAT (Not-All-Equal-Satisfiability). La résolution de ce problème pour toutes les instances possibles à l'aide d'un algorithme en temps polynomial n'est pas possible. Vous proposerez un algorithme permettant de trouver une solution du problème NAE-3-SAT pour des instances générées aléatoirement.
---> 
+Imaginez que vous êtes à la tête d'une entreprise de livraison qui livre des matières premières pour des chantiers. Chaque jour, vous avez N livreurs et N chantiers. Pour optimiser les coûts de livraisons, vous mettez en relation chaque chantier avec k livreurs tirés au hasard. Quel type de marchandise chaque livreur doit prendre dans sa journée pour éviter que tous les livreurs d'un même chantier livre la même marchandise ? En désignant les marchandises par des couleurs, ce problème revient à résoudre le problème de coloriage sur hypergraphes. C'est un problème NP-complet, lorsque le nombre M/N est grand, il devient très dur à résoudre. Vous concevrez un programme en C qui génère des instances aléatoires de ce problème et trouve une solution à l'aide de la méthode de recuit simulé. Vous évaluerez dans un second temps la limite M/N au delà de laquelle votre algorithme échoue.
+ 
 
 ### Démarche proposée
-1. Créer des instances pour le problème NAE-3-SAT en utilisant des descriptions de graphes bipartites aléatoires.
+1. Créer des instances pour le problème NAE-3-SAT en utilisant la notion de graphes bipartites aléatoires.
 2. Ecrire un programme qui vérifie si une problème est satisfait ou non.
 3. Implémenter une méthode de résolution de votre choix (Simulated Annealing, Belief Propagation, Genetic Algorithm).
 4. Implémenter une méthode de recherche de solution à partir des résultats de la méthode précédente.
-5. Comparer les performances de votre programme à d'autres méthodes ou à une approche brute-force. Eventuellement montrer les limites 
+5. Comparer les performances de votre programme à d'autres méthodes ou à une approche brute-force.
+6. Mettre en évidence la non satisfabilité pour les grandes valeurs de M/N.
 
 
 ### Définition d'un Problème NAESAT :
@@ -25,7 +26,7 @@ Mathématiquement, le problème NAESAT (Not-All-Equal Satisfiability) consiste �
 Le problème NAESAT peut être assimilé au problème de coloriage de graphes à deux couleurs.
 
 ### Lien avec l'analogie des rôles dans un réseau
-Les membres d'un réseau (ex: travailleurs dans une entreprise) sont représentés par des variables qui peuvent avoir deux états (coordinateur:1; technicien:0). Chaque tâche est représentée par une clause dans laquel les membres sont connectés (équipe) et pour lequel la contrainte impose d'avoir au moins un coordinateur et un technicien.
+Les membres d'un réseau (ex: les livreurs) sont représentés par des variables qui peuvent avoir deux états (ex : marchandise type "sable" :1; marchandise type "ciment" :0). Chaque chantier est représentée par une clause dans laquel les livreurs sont connectés et pour lequel la contrainte impose d'avoir au moins un livreur apportant une marchandise de chaque type.
 
 ### Lien avec les Graphes Bipartites
 Le problème NAESAT peut être visualisé sous forme de graphes bipartites, où les nœuds d'un ensemble représentent les variables et les nœuds de l'autre ensemble représentent les clauses. Les arêtes du graphe indiquent les liens entre les variables et les clauses. Cette représentation graphique facilite la visualisation et l'analyse du problème, tout en permettant l'application d'algorithmes de propagation de messages.
@@ -80,11 +81,14 @@ Cela permet de représenter les contraintes spécifiques au problème NAESAT, o�
 
 ### Références
 
-1) Castellani, T.; Napolano, V.; Ricci-Tersenghi, F.; Zecchina, R. Bicolouring Random Hypergraphs. J. Phys. A: Math. Gen. 2003, 36 (43), 11037. [https://doi.org/10.1088/0305-4470/36/43/026](https://doi.org/10.1088/0305-4470/36/43/026).
+1) Kose, A.; Sonmez, B. A.; Balaban, M. Simulated Annealing Algorithm for Graph Coloring. arXiv December 3, 2017. https://doi.org/10.48550/arXiv.1712.00709.
 
-2) Krz̧akała, F.; Montanari, A.; Ricci-Tersenghi, F.; Semerjian, G.; Zdeborová, L. Gibbs States and the Set of Solutions of Random Constraint Satisfaction Problems. Proceedings of the National Academy of Sciences 2007, 104 (25), 10318–10323. [https://doi.org/10.1073/pnas.0703685104](https://doi.org/10.1073/pnas.0703685104).
 
-3) Mézard, M.; Parisi, G.; Zecchina, R. Analytic and Algorithmic Solution of Random Satisfiability Problems. Science 2002, 297 (5582), 812–815. [https://doi.org/10.1126/science.1073287](https://doi.org/10.1126/science.1073287).
+2) Castellani, T.; Napolano, V.; Ricci-Tersenghi, F.; Zecchina, R. Bicolouring Random Hypergraphs. J. Phys. A: Math. Gen. 2003, 36 (43), 11037. [https://doi.org/10.1088/0305-4470/36/43/026](https://doi.org/10.1088/0305-4470/36/43/026).
+
+3) Krz̧akała, F.; Montanari, A.; Ricci-Tersenghi, F.; Semerjian, G.; Zdeborová, L. Gibbs States and the Set of Solutions of Random Constraint Satisfaction Problems. Proceedings of the National Academy of Sciences 2007, 104 (25), 10318–10323. [https://doi.org/10.1073/pnas.0703685104](https://doi.org/10.1073/pnas.0703685104).
+
+4) Mézard, M.; Parisi, G.; Zecchina, R. Analytic and Algorithmic Solution of Random Satisfiability Problems. Science 2002, 297 (5582), 812–815. [https://doi.org/10.1126/science.1073287](https://doi.org/10.1126/science.1073287).
 
 [Haut de la page](#allocation-de-rôles-dans-un-réseau)
 
