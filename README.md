@@ -11,7 +11,7 @@ I am a post-doctoral researcher working at [Coudert lab](https://www.coudert.nam
 - [Email](mailto:arthur.hardiagon@chimieparistech.psl.eu)
 - [Google Scholar](https://scholar.google.com/citations?user=Csa4x4AAAAAJ&hl=fr&oi=ao)
 - [Github](https://github.com/ahardiag)
-- [Linkedin](www.linkedin.com/in/arthur-hardiagon-266181112)
+- [Linkedin](https://fr.linkedin.com/in/arthur-hardiagon-266181112)
 - [ResearchGate](https://www.researchgate.net/profile/Arthur-Hardiagon)
 - Phone : 0185784267
 - Address : [ChimieParisTech](https://www.chimieparistech.psl.eu/); Office 137; 11, rue Pierre et Marie Curie 75231 PARIS, France
