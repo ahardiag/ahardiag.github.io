@@ -14,10 +14,10 @@ Imaginez que vous êtes à la tête d'une entreprise de livraison qui livre des 
 ### Démarche proposée
 1. Créer des instances pour le problème NAE-3-SAT en utilisant la notion de graphes bipartites aléatoires.
 2. Ecrire un programme qui vérifie si une problème est satisfait ou non.
-3. Implémenter une méthode de résolution de votre choix (Simulated Annealing, Belief Propagation, Genetic Algorithm).
-4. Implémenter une méthode de recherche de solution à partir des résultats de la méthode précédente.
-5. Comparer les performances de votre programme à d'autres méthodes ou à une approche brute-force.
-6. Mettre en évidence la non satisfabilité pour les grandes valeurs de M/N.
+3. Lire la documentation sur l'algorithme de Recuit Simulé [1,2] et adapter la méthode au problème.
+4. Comparer les performances de votre programme à d'autres méthodes ou à une approche brute-force.
+5. Comparer l'efficacité du programme par rapport à d'autres méthodes, c'est-à-dire  savoir s'il abouti à des solutions plus satisfaisantes.
+6. Mettre en évidence la non satisfiabilité pour les grandes valeurs de M/N.
 
 
 ### Définition d'un Problème NAESAT :
@@ -35,10 +35,34 @@ Le problème NAESAT peut être visualisé sous forme de graphes bipartites, où 
 
 *Figure 1 : Graphe bipartite. Les clauses sont représentées par des carrés et les variables par des cercles. Les liens définissent les variables entrantes dans chacune des clauses.*
 
+Les graphes bipartites sont particulièrement adaptés à la représentation des hypergraphes, classe de graphes plus général que les graphes simples. Dans le cas des graphes usuels, chaque arête relie deux noeud alors que dans un hypergraphe, une arête peut relier plus de deux noeuds. 
+
+### Quelques définitions
+
+Suivant le domaine d'étude (informatique, mathématiques, physique statistique), la terminologie des articles de recherche peut varier. Les variables peuvent être considérés comme des spins en physique statistique, et la fonction totale de coût représentant le nombre de clauses satisfaites peut être considérée comme l'inverse d'une énergie. L'énergie du système s'écrit donc :
+
+$$
+E(\{x_i\}_{i=0..N}) =  \sum_{a = 0}^M f_a(\{x_j\}_{j \in \partial a})
+$$
+
+où $f_a$ est le coût d'une clause indiquant si elle est satisfaite ou non :
+$$
+f_a(x_{l_1}, x_{l_2}, \ldots, x_{l_k}) = \begin{cases} 
+      1 & \text{si au moins deux spins sont de signe opposés} \\
+      0 & \text{sinon}
+\end{cases}
+$$
+
+avec $x_{l_1}, x_{l_2}, \ldots, x_{l_k}$ les valeurs de variables présentes dans la clause $a$. Si au moins une des variables est vraie et au moins une des variables est fausse, alors la clause $b$ est satisfaite (coût 1), sinon, le coût est fixé à 0 pour indiquer que la clause n'est pas satisfaite.
+
+### Méthode de recuit simulé
+
+Cette méthode combine une recherche locale de solution, un algorithme de Métropolis qui permet de s'écarter des minima locaux d'énergie avec une dynamique de recuit qui permet de converger vers une solution de plus basse énergie (à faible température ou bruit) [1,2].
+
 ### Méthode de Propagation de Message dans les graphes bipartites
 L'algorithme de propagation de message (Belief Propagation) repose sur la mise à jour itérative des messages échangés entre les nœuds du graphe. Ces messages reflètent les croyances et les probabilités concernant les attributions de variables. Les équations utilisées dans la propagation de message permettent d'ajuster ces probabilités en fonction des informations des nœuds voisins, aboutissant à une convergence vers une solution potentielle du problème.
 
-Cette approche de propagation de message permet une exploration systématique de l'espace des solutions et offre un cadre méthodologique pour résoudre des instances du problème NAESAT.
+Cette approche de propagation de message permet une exploration systématique de l'espace des solutions et offre un cadre méthodologique pour résoudre des instances du problème NAESAT. Elle permet de définir des algorithmes de résolution très puissant, même proche du seuil de satisfaisabilité [4].
 
 <img src="./figures/BP_Krzakala2007.png" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
 
@@ -65,30 +89,20 @@ où
 - $\mu_{k \to b}(\mathbf{x}_k)$ : Message reçu par $b$ de la part de son voisin $k$.
 - $p(x_i)$ : Croyance locale de la variable $i$, indiquant la probabilité que $x_i$ prenne la valeur $x_i$.
 
-Dans le contexte du problème NAESAT (Not-All-Equal SAT), la fonction de coût associée à une clause $b$ dépend des valeurs booléennes des variables présentes dans cette clause. L'objectif est de s'assurer qu'au moins une des variables est vraie (satisfait) et qu'au moins un des variables est faux (non satisfait). Par conséquent, la fonction de coût $f_b$ peut être définie de la manière suivante :
-
-$$
-f_b(x_{l_1}, x_{l_2}, \ldots, x_{l_k}) = \begin{cases} 
-      1 & \text{si au moins un variable est vraie et au moins une variable est fausse} \\
-      0 & \text{sinon}
-\end{cases}
-$$
-
-Où $x_{l_1}, x_{l_2}, \ldots, x_{l_k}$ sont les valeurs de vérité des variables présents dans la clause $b$. Si au moins une des variables est vraie et au moins une des variables est fausse, alors la clause $b$ est satisfaite (coût 1), sinon, le coût est fixé à 0 pour indiquer que la clause n'est pas satisfaite.
-
-Cela permet de représenter les contraintes spécifiques au problème NAESAT, où chaque clause doit avoir à la fois une variable vraie et un variable fausse pour être considérée comme satisfaite.
-
 
 ### Références
 
-1) Kose, A.; Sonmez, B. A.; Balaban, M. Simulated Annealing Algorithm for Graph Coloring. arXiv December 3, 2017. https://doi.org/10.48550/arXiv.1712.00709.
+1) Johnson, D. S.; Aragon, C. R.; McGeoch, L. A.; Schevon, C. Optimization by Simulated Annealing: An Experimental Evaluation; Part I, Graph Partitioning. Operations Research 1989, 37 (6), 865–892. https://doi.org/10.1287/opre.37.6.865.
 
+2) Johnson, D. S.; Aragon, C. R.; McGeoch, L. A.; Schevon, C. Optimization by Simulated Annealing: An Experimental Evaluation; Part II, Graph Coloring and Number Partitioning. Operations Research 1991, 39 (3), 378–406. https://doi.org/10.1287/opre.39.3.378.
 
-2) Castellani, T.; Napolano, V.; Ricci-Tersenghi, F.; Zecchina, R. Bicolouring Random Hypergraphs. J. Phys. A: Math. Gen. 2003, 36 (43), 11037. [https://doi.org/10.1088/0305-4470/36/43/026](https://doi.org/10.1088/0305-4470/36/43/026).
+3) Kose, A.; Sonmez, B. A.; Balaban, M. Simulated Annealing Algorithm for Graph Coloring. arXiv December 3, 2017. https://doi.org/10.48550/arXiv.1712.00709.
 
-3) Krz̧akała, F.; Montanari, A.; Ricci-Tersenghi, F.; Semerjian, G.; Zdeborová, L. Gibbs States and the Set of Solutions of Random Constraint Satisfaction Problems. Proceedings of the National Academy of Sciences 2007, 104 (25), 10318–10323. [https://doi.org/10.1073/pnas.0703685104](https://doi.org/10.1073/pnas.0703685104).
-
-4) Mézard, M.; Parisi, G.; Zecchina, R. Analytic and Algorithmic Solution of Random Satisfiability Problems. Science 2002, 297 (5582), 812–815. [https://doi.org/10.1126/science.1073287](https://doi.org/10.1126/science.1073287).
+4) Castellani, T.; Napolano, V.; Ricci-Tersenghi, F.; Zecchina, R. Bicolouring Random Hypergraphs. J. Phys. A: Math. Gen. 2003, 36 (43), 11037. [https://doi.org/10.1088/0305-4470/36/43/026](https://doi.org/10.1088/0305-4470/36/43/026).
+   
+5) Krz̧akała, F.; Montanari, A.; Ricci-Tersenghi, F.; Semerjian, G.; Zdeborová, L. Gibbs States and the Set of Solutions of Random Constraint Satisfaction Problems. Proceedings of the National Academy of Sciences 2007, 104 (25), 10318–10323. [https://doi.org/10.1073/pnas.0703685104](https://doi.org/10.1073/pnas.0703685104).
+   
+6) Mézard, M.; Parisi, G.; Zecchina, R. Analytic and Algorithmic Solution of Random Satisfiability Problems. Science 2002, 297 (5582), 812–815. [https://doi.org/10.1126/science.1073287](https://doi.org/10.1126/science.1073287).
 
 [Haut de la page](#allocation-de-rôles-dans-un-réseau)
 

@@ -4,7 +4,8 @@
 I am a post-doctoral researcher working at [Coudert lab](https://www.coudert.name/group.html) in CNRS / Chimie ParisTech institute. I am interested in chemical physics, molecular simulations (Molecular Dynamics, Monte Carlo) and databases management in materials science.
 
 ## Teaching
-2023-2024 [Informatics Projects](./projets_informatiques/sujets_AH.md)
+- 2023-2024 [Informatic Projects](./projets_informatiques/sujets_AH.md) (french)
+- 2024-2025 [Informatic Projects](./projets_informatiques/sujets_AH_24-25.md) (french)
 
 ## Contact
 
