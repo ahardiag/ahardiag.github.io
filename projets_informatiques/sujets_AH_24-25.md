@@ -27,7 +27,7 @@ Les alliages métalliques sont des matériaux composites constitués de deux ou 
 - La température de Curie : température au-delà de laquelle les deux éléments sont complètement mélange
 - Le phénomène de « slow cooling » qui permet d’obtenir des phases stable 
 
-[Pour aller plus loin](./alliages_croissance.md)
+[Pour aller plus loin](./alliage_croissance.md)
 
 
 [Retour page](../README.md)
