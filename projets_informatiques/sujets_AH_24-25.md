@@ -21,9 +21,13 @@ Imaginez que vous êtes à la tête d'une entreprise de livraison qui livre des 
 [Pour aller plus loin](./allocation_roles_reseau.md)
 
 ### Alliages et croissance de phases
-TODO
 
-[Pour aller plus loin](./alliage_kawasaki.md)
+Les alliages métalliques sont des matériaux composites constitués de deux ou plusieurs éléments métalliques qui présentent des propriétés mécaniques et physiques améliorées par rapport aux métaux purs. La microstructure de ces alliages, influencée par la répartition des différents atomes, joue un rôle crucial dans leurs propriétés macroscopiques, telles que la dureté, la résistance à la corrosion, et la conductivité électrique. Pour comprendre et prédire la formation de cette microstructure, les modèles de physique statistique, comme le modèle d'Ising, sont souvent utilisés. Le projet consistera à identifier dans le modèle d’Ising avec dynamique conservée de Kawasaki deux propriétés particulières que l’on retrouve dans les alliages :
+
+- La température de Curie : température au-delà de laquelle les deux éléments sont complètement mélange
+- Le phénomène de « slow cooling » qui permet d’obtenir des phases stable 
+
+[Pour aller plus loin](./alliages_croissance.md)
 
 
 [Retour page](../README.md)
