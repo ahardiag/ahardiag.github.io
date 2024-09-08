@@ -28,7 +28,7 @@ $$
 E = - \sum_{i \in \partial j} J_{ij} S_{i} S_{j} - B \sum_{i=1}^{N} S_{i}
 $$
 
-où $J_{ij}$ est la constante de couplage entre deux spins voisins et B le champ magnétique moyen appliqué à l'ensemble du système et $\{{S_i}\}_{i=0..N}$ l'ensemble des N spins ou variables à deux états : $S_i=1$ ou $-1$.
+où $J_{ij}$ est la constante de couplage entre deux spins voisins et B le champ magnétique moyen appliqué à l'ensemble du système et $\{S_i\}_{i=0..N}$ l'ensemble des N spins ou variables à deux états : $S_i=1$ ou $-1$.
 Les atomes étant identiques, on a $J_{ij} = J$, on pourra prendre dans un premier temps $B = 0$ (pas de perturbation extérieure du système) et J>0 (interaction type ferromagnétique).
 
 ### Algorithme de Metropolis
