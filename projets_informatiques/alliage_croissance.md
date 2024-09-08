@@ -28,23 +28,23 @@ $$
 E = - \sum_{i \in \partial j} J_{ij} S_{i} S_{j} - B \sum_{i=1}^{N} S_{i}
 $$
 
-où $J_{ij}$ est la constante de couplage entre deux spins voisins et B le champ magnétique moyen appliqué à l'ensemble du système et $\{S_i\}_{i=0..N}$ l'ensemble des N spins ou variables à deux états : $S_i=1$ ou $-1$.
+où $J_{ij}$ est la constante de couplage entre deux spins voisins et B le champ magnétique moyen appliqué à l'ensemble du système et $$\{ S_i \}_{i=0..N}$$ l'ensemble des N spins ou variables à deux états : $S_i=1$ ou $-1$.
 Les atomes étant identiques, on a $J_{ij} = J$, on pourra prendre dans un premier temps $B = 0$ (pas de perturbation extérieure du système) et J>0 (interaction type ferromagnétique).
 
 ### Algorithme de Metropolis
 
-Pour faire évoluer le système vers un état d'équilibre qui échantillonne correctement les configurations selon la loi de probabilité de Boltzmann : $P(\{S_i\}_{i=0..N}) \propto exp(-\frac{E(\{S_i\}_{i=0..N}}{k_BT}) $, on peut utiliser l'algorithme de Metropolis suivant :
+Pour faire évoluer le système vers un état d'équilibre qui échantillonne correctement les configurations selon la loi de probabilité de Boltzmann : $$ P(\{S_i\}_{i=0..N}) \propto exp(-\frac{E(S_1,S_2,.., S_N)}{k_BT}) $$, on peut utiliser l'algorithme de Metropolis suivant :
 
 1. **Initialiser** la grille de spins.
-2. **Définir** les paramètres : \( J \), \( B \), \( T \), \( \beta = \frac{1}{k_B T} \).
+2. **Définir** les paramètres : J, B ,T, $ \beta = \frac{1}{k_B T} $.
 3. **Pour chaque itération** :
-   - Sélectionner un spin aléatoire \( S_i \).
-   - Calculer l'énergie \(\Delta E\) du changement de spin :
-     \[
+   - Sélectionner un spin aléatoire $S_i$.
+   - Calculer l'énergie $\Delta E$ du changement de spin :
+     $$
      \Delta E = 2 \cdot S_i \cdot (J \cdot \text{somme voisins} + B)
-     \]
-   - Si \(\Delta E < 0\) ou avec probabilité \( p = \exp(-\beta \cdot \Delta E) \), inverser \( S_i \).
-4. **Répéter** jusqu'à \( N_{\text{iter}} \) itérations.
+      $$
+   - Si $$\Delta E < 0$$ ou avec probabilité $$ p = \exp(-\beta \cdot \Delta E) $$, inverser $S_i$.
+4. **Répéter** jusqu'à $$N_{\text{iter}}$$ itérations.
 
 Metropolis fait fartie des algorihmes dit de dynamique non-conservative, cela signinfie que la magnétisation totale $M = \sum_{i=1..N} S_i$ n'est pas constante.
 
@@ -55,12 +55,12 @@ Dans le cas d'un réseau 2D à géométrie carrée, le nombre de spins totale es
 Dans le cas de Kawasaki, la dynamique est conservative, c'est-à-dire que la magnétisation totale est constante, cette dynamique peut donc être utilisé pour modéliser l'évolution d'un mélange de deux espèces dont leur quantité de matière reste constante au cours du temps. Dans la dynamique de Kawasaki, on échange deux spins voisins et on utilise un critère sur la variation d'énergie similaire à l'algorithme précédent, le pseudo-code de l'algorithme est le suivant :
 
 1. **Initialiser** la grille de spins.
-2. **Définir** les paramètres : \( J \), \( B \), \( T \), \( \beta = \frac{1}{k_B T} \).
+2. **Définir** les paramètres : J, B, T, $$\beta = \frac{1}{k_B T} $$.
 3. **Pour chaque itération** :
-   - Choisir deux spins aléatoires \( S_i \) et \( S_j \).
-   - Calculer l'énergie avant \((E_{\text{initial}})\) et après \((E_{\text{final}})\) la permutation des spins.
-   - Calculer la différence d'énergie \(\Delta E\).
-   - Accepter la permutation avec probabilité \( \min(1, \exp(-\beta \cdot \Delta E)) \).
+   - Choisir deux spins aléatoires $S_i$ et $S_j$.
+   - Calculer l'énergie avant $$(E_{\text{initial}})$$ et après $$(E_{\text{final}})$$ la permutation des spins.
+   - Calculer la différence d'énergie $\Delta E$
+   - Accepter la permutation avec probabilité $$ \min(1, \exp(-\beta \cdot \Delta E)) $$.
 4. **Répéter** jusqu'à ce que toutes les itérations soient complètes.
 
 ## Conditions aux bords
@@ -76,7 +76,7 @@ $$
 $$
 L_c \propto \frac{L^2}{N_{c}/2}
 $$
-- à partir de la **fonction de corrélation de paires** $g(r) = <S_i S_j>$
+- à partir de la **fonction de corrélation de paires** $$g(r) = \langle S_i S_j \rangle $$
 
 ### Références
 
