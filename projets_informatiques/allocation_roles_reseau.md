@@ -8,7 +8,7 @@ description: Allocation de rôles dans un réseau
 
 
 ### Sujet
-Imaginez que vous êtes à la tête d'une entreprise de livraison qui livre des matières premières pour des chantiers. Chaque jour, vous avez N livreurs et N chantiers. Pour optimiser les coûts de livraisons, vous mettez en relation chaque chantier avec k livreurs tirés au hasard. Quel type de marchandise chaque livreur doit prendre dans sa journée pour éviter que tous les livreurs d'un même chantier livre la même marchandise ? En désignant les marchandises par des couleurs, ce problème revient à résoudre le problème de coloriage sur hypergraphes. C'est un problème NP-complet, lorsque le nombre M/N est grand, il devient très dur à résoudre. Vous concevrez un programme en C qui génère des instances aléatoires de ce problème et trouve une solution à l'aide de la méthode de recuit simulé. Vous évaluerez dans un second temps la limite M/N au delà de laquelle votre algorithme échoue.
+Imaginez que vous êtes à la tête d'une entreprise de livraison qui livre des matières premières pour des chantiers. Chaque jour, vous avez $N$ livreurs et $M$ chantiers. Pour optimiser les coûts de livraisons, vous mettez en relation chaque chantier avec k livreurs tirés au hasard. Quel type de marchandise chaque livreur doit prendre dans sa journée pour éviter que tous les livreurs d'un même chantier livre la même marchandise ? En désignant les marchandises par des couleurs, ce problème revient à résoudre le problème de coloriage sur hypergraphes. C'est un problème NP-complet, lorsque le nombre $M/N$ est grand, il devient très dur à résoudre. Vous concevrez un programme en C qui génère des instances aléatoires de ce problème et trouve une solution à l'aide de la méthode de recuit simulé. Vous évaluerez dans un second temps la limite $M/N$ au delà de laquelle votre algorithme échoue.
  
 
 ### Démarche proposée
@@ -48,8 +48,8 @@ $$
 où $f_a$ est le coût d'une clause indiquant si elle est satisfaite ou non :
 $$
 f_a(x_{l_1}, x_{l_2}, \ldots, x_{l_k}) = \begin{cases} 
-      1 & \text{si au moins deux spins sont de signe opposés} \\
-      0 & \text{sinon}
+      0 & \text{si au moins deux spins sont de signe opposés} \\
+      1 & \text{sinon}
 \end{cases}
 $$
 

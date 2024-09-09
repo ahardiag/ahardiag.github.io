@@ -27,7 +27,7 @@ $$
 
 <img src="./figures/potentiel_LJ.png" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
 
-*Figure 1 : Potentiel d'interaction entre sphères de Lennard-Jones.</a>*
+*Figure 1 : Potentiel d'interaction entre sphères de Lennard-Jones.*
 
 Pour simplifier le problème, on pourra tronquer les interactions entre particules à partir d'une certaine distance.
 
@@ -37,7 +37,7 @@ Les conditions périodiques, également connues sous le nom de conditions aux li
 
 <img src="./figures/conditions_periodiques.png" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
 
-*Figure 2 : Illustration des conditions périodiques dans un espace 2D lors du mouvement d'une particule au bord de la boîte.</a>*
+*Figure 2 : Illustration des conditions périodiques dans un espace 2D lors du mouvement d'une particule au bord de la boîte.*
 
 ### Algorithme de Monte Carlo
 
