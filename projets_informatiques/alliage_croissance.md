@@ -78,6 +78,11 @@ L_c \propto \frac{L^2}{N_{c}/2}
 $$
 - à partir de la **fonction de corrélation de paires** $$g(r) = \langle S_i S_j \rangle $$
 
+### Quelques outils utiles 
+
+Visuaiser des images 2D avec python : [Ici](./example_image_2D.ipynb)
+
+
 ### Références
 
 - Cours de classe préparatoire sur le modèle d'Ising 2D : [Modèle d'Ising 2D](https://femto-physique.fr/simulations/ising2D.php#menu)
