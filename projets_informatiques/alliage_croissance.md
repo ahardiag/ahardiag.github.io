@@ -80,7 +80,7 @@ $$
 
 ### Quelques outils utiles 
 
-Visuaiser des images 2D avec python : [Ici](./example_image_2D.ipynb)
+Visuaiser des images 2D avec python : [lien téléchargeable](./example_image_2D.ipynb); [voir notebook](https://nbviewer.org/github/ahardiag/ahardiag.github.io/blob/main/projets_informatiques/example_image_2D.ipynb)
 
 
 ### Références
