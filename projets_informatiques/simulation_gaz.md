@@ -62,7 +62,7 @@ avec $\langle \rangle$ une moyenne entre plusieurs configurations, U le potentie
 En utilisant le potentiel d'interaction de Lennard-Jones, la pression se réécrit :
 
 $$
-P = \rho k_{B}T + \frac{1}{V} 24 \epsilon \langle \sum_{i<j} (2(\frac{\sigma}{r_{ij}})^{12}-(\frac{\sigma}{r_{ij}})^{6}) \rangle 
+P = \rho k_{B}T + \frac{1}{V} 8 \epsilon \langle \sum_{i<j} (2(\frac{\sigma}{r_{ij}})^{12}-(\frac{\sigma}{r_{ij}})^{6}) \rangle 
 $$
 
 
